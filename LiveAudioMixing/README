@@ -1,0 +1,14 @@
+Phase one of our Live Audio mixing project:
+
+Aim: given an audio signal classify as instrument(mridanga, violin) or vocals
+
+training : dataset with audio sample for each ( in the repo only five sample for each is provided for conceptual understanding)
+
+code: 
+
+first extracts metadata and stores in csv : metadata includes folder it belongs to , url to the folder and class( 1 for mridanga 2 for violin and 3 for vocals
+Once mtadata is extracted. Feauture extraction is run on each of the audio files: MFCC values are extracted using librosa package 
+MFCC values are stored as 20 attributes along with the meta data in features extracted csv file
+Finally a SVM model ( ML model for classification) is run training on MFCC values (20 attributes) and the output is the class as mentioned above
+the model is saved for later use
+Validation is done to test accuracy of model and rated based on metrics finally
